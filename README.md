@@ -1,58 +1,20 @@
-# reuse-ember-build
+# READ ME
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+`master` branch has pollyjs included and has the problem happening.
+`resuse-build-working-no-pollyjs` branch has the reuse build working after removing the @pollyjs/ember addon.
 
-## Prerequisites
+## Instructions to see the problem:
 
-You will need the following things properly installed on your computer.
+- git clone <this-repo-url>
+- git checkout master
+- yarn install
+- ember build
+- ember t --path dist
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
-* [Yarn](https://yarnpkg.com/)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+## Instructions to see the problem go away after removing the @pollyjs/embeer:
 
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd reuse-ember-build`
-* `yarn install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `yarn lint:hbs`
-* `yarn lint:js`
-* `yarn lint:js --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+- git checkout resuse-build-working-no-pollyjs
+- rm -rf dist tmp
+- yarn install
+- ember build
+- ember t --path dist
